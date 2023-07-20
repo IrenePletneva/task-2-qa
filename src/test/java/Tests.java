@@ -12,6 +12,7 @@ public class Tests {
     @BeforeAll
     static void beforeAll() {
         Configuration.browserSize = "1920x1080";
+        Configuration.pageLoadStrategy = "eager";
     }
 
     @Test
@@ -34,7 +35,8 @@ public class Tests {
 //        $("[id = dateOfBirthInput]").setValue("01 Dec 2022").pressEnter();
         $(".react-datepicker__year-select").$("[value=\"2000\"]").click();
         $(".react-datepicker__month-select").$("[value=\"7\"]").click();
-        $("[class=\"react-datepicker__day react-datepicker__day--011\"]").click();
+//        $("[class=\"react-datepicker__day react-datepicker__day--011\"]").click();
+        $(".react-datepicker__day--011").click();
 
         //Subject
         $("#subjectsInput").setValue("Physics").pressEnter();
